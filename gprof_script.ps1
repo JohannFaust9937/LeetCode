@@ -1,0 +1,1 @@
+gprof .\executable\g++_project.exe .\gmon.out > .\analysis.txt
