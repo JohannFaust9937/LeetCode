@@ -16,7 +16,6 @@ and the last sz_nums2 elements are set to 0 and should be ignored. nums2 has a l
 */
 
 #include <vector>
-#include <iostream>
 
 class Solution
 {
