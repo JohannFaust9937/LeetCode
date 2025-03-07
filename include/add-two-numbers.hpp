@@ -23,6 +23,9 @@ struct ListNode
 class Solution
 {
 public:
+    Solution() {};
+    ~Solution() = default;
+    
     ListNode *addTwoNumbers(ListNode *list1, ListNode *list2)
     {
         ListNode *temporary = new ListNode();
@@ -32,8 +35,16 @@ public:
         while (list1 != nullptr or list2 != nullptr or carry != 0)
         {
             int amount = carry;
-            if (list1 != nullptr) { amount += list1->val; list1 = list1->next; }
-            if (list2 != nullptr) { amount += list2->val; list2 = list2-> next; }
+            if (list1 != nullptr)
+            {
+                amount += list1->val;
+                list1 = list1->next;
+            }
+            if (list2 != nullptr)
+            {
+                amount += list2->val;
+                list2 = list2->next;
+            }
             carry = amount / 10;
             result->next = new ListNode(amount % 10);
             result = result->next;
